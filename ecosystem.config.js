@@ -15,7 +15,7 @@ module.exports = {
       user: 'SSH_USERNAME',
       host: 'SSH_HOSTMACHINE',
       ref: 'origin/master',
-      repo: 'GIT_REPOSITORY',
+      repo: 'https://github.com/arwaabdelrahem/online-judge-microservice',
       path: 'DESTINATION_PATH',
       'pre-deploy-local': '',
       'post-deploy':

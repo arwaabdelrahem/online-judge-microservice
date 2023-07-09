@@ -1,11 +1,10 @@
 import { Injectable } from '@nestjs/common';
-import { RmqContext } from '@nestjs/microservices';
 import { randomBytes } from 'crypto';
 import { DockerSandBox } from './docker-sandbox';
 
 @Injectable()
 export class ProblemsService {
-  async solve(data: number[], context: RmqContext) {
+  async solve(data: number[]) {
     const { language, code, problem } = data as any;
     const passedTestCases = [];
 
