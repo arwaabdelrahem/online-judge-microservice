@@ -12,8 +12,8 @@ module.exports = {
 
   deploy: {
     production: {
-      user: 'SSH_USERNAME',
-      host: 'SSH_HOSTMACHINE',
+      user: 'root',
+      host: ['178.128.59.69'],
       ref: 'origin/master',
       repo: 'https://github.com/arwaabdelrahem/online-judge-microservice',
       path: 'DESTINATION_PATH',
