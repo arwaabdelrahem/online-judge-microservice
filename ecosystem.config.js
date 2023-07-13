@@ -1,26 +1,22 @@
 module.exports = {
   apps: [
     {
-      script: 'index.js',
+      script: './dist/main.js',
+      instances: '2',
+      exec_mode: 'cluster',
+      autorestart: true,
       watch: '.',
     },
-    {
-      script: './service-worker/',
-      watch: ['./service-worker'],
-    },
   ],
-
   deploy: {
     production: {
       user: 'root',
       host: ['178.128.59.69'],
       ref: 'origin/master',
       repo: 'https://github.com/arwaabdelrahem/online-judge-microservice',
-      path: 'DESTINATION_PATH',
-      'pre-deploy-local': '',
+      path: '/var/app/repositories',
       'post-deploy':
         'npm install && pm2 reload ecosystem.config.js --env production',
-      'pre-setup': '',
     },
   },
 };
