@@ -22,7 +22,7 @@ module.exports = {
       // key: '.ssh/id_rsa.pub',
       user: 'root',
       host: ['159.223.198.150'],
-      ref: 'origin/master',
+      ref: 'master',
       repo: 'https://github.com/arwaabdelrahem/online-judge-microservice',
       path: '/var/app/repositories',
       'post-deploy':
