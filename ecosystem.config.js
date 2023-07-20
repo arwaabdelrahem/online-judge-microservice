@@ -46,10 +46,10 @@ module.exports = {
     production: {
       // "key"  : ".ssh/creds.pem",
       user: 'root',
-      host: ['146.190.170.90'],
+      host: ['146.190.165.226'],
       ref: 'origin/master',
       repo: 'https://github.com/arwaabdelrahem/online-judge-microservice',
-      path: '/var/www/prod2',
+      path: '/var/www/prod',
       'post-deploy':
         'npm install && npm run build &&  pm2 reload ecosystem.config.js --env production && pm2 save',
     },
