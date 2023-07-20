@@ -6,12 +6,21 @@ module.exports = {
       exec_mode: 'cluster',
       autorestart: true,
       watch: '.',
+      env_production: {
+        NODE_ENV: 'production',
+        DB: 'mongodb+srv://Arwaabdelrahem:AOlKUPBeQqrPHpOr@cluster1.bgufy1w.mongodb.net/flowers?retryWrites=true&w=majority',
+        'RMQ.urls': [
+          'amqps://cdepyhys:Rs8ld5zpCFA8v3CDu91F8bUG2NuFARr0@shark.rmq.cloudamqp.com/cdepyhys',
+        ],
+        jwtSecret: 'secretKey',
+      },
     },
   ],
   deploy: {
     production: {
+      // key: '.ssh/id_rsa.pub',
       user: 'root',
-      host: ['178.128.59.69'],
+      host: ['159.223.198.150'],
       ref: 'origin/master',
       repo: 'https://github.com/arwaabdelrahem/online-judge-microservice',
       path: '/var/app/repositories',
