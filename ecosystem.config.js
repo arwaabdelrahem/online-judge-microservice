@@ -1,6 +1,7 @@
 module.exports = {
   apps: [
     {
+      name: 'online-judge-microservice',
       script: './dist/main.js',
       instances: '2',
       exec_mode: 'cluster',
