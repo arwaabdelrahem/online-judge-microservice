@@ -49,7 +49,7 @@ module.exports = {
       host: ['146.190.170.90'],
       ref: 'origin/master',
       repo: 'https://github.com/arwaabdelrahem/online-judge-microservice',
-      path: '/var/www/prod',
+      path: '/var/www/prod1',
       'post-deploy':
         'npm install && npm run build &&  pm2 reload ecosystem.config.js --env production && pm2 save',
     },
