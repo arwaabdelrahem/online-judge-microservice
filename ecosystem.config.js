@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'online-judge-microservice',
+      name: 'oj-microservice',
       script: './dist/main.js',
       instances: '2',
       exec_mode: 'cluster',
@@ -19,7 +19,7 @@ module.exports = {
   deploy: {
     production: {
       user: 'root',
-      host: ['165.232.132.255'],
+      host: ['143.244.181.140'],
       ref: 'origin/master',
       repo: 'https://github.com/arwaabdelrahem/online-judge-microservice',
       path: '/var/www/prod',
