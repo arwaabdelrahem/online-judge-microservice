@@ -1,33 +1,7 @@
-// module.exports = {
-//   apps: [
-//     {
-//       name: 'online-judge-microservice',
-//       script: './dist/main.js',
-//       instances: '2',
-//       exec_mode: 'cluster',
-//       autorestart: true,
-//       watch: '.',
-
-//     },
-//   ],
-//   deploy: {
-//     production: {
-//       // key: '.ssh/id_rsa.pub',
-//       user: 'root',
-//       host: ['146.190.170.90'],
-//       ref: 'origin/master',
-//       repo: 'https://github.com/arwaabdelrahem/online-judge-microservice',
-//       path: '/var/www/repositories',
-//       'post-deploy':
-//         'npm install && pm2 reload ecosystem.config.js --env production',
-//     },
-//   },
-// };
-
 module.exports = {
   apps: [
     {
-      name: 'Micro-service',
+      name: 'online-judge-microservice',
       script: './dist/main.js',
       instances: '2',
       exec_mode: 'cluster',
@@ -44,12 +18,11 @@ module.exports = {
   ],
   deploy: {
     production: {
-      // "key"  : ".ssh/creds.pem",
       user: 'root',
-      host: ['146.190.165.226'],
+      host: ['165.232.132.255'],
       ref: 'origin/master',
       repo: 'https://github.com/arwaabdelrahem/online-judge-microservice',
-      path: '/var/www/prod1',
+      path: '/var/www/prod',
       'post-deploy':
         'npm install && npm run build &&  pm2 reload ecosystem.config.js --env production && pm2 save',
     },
