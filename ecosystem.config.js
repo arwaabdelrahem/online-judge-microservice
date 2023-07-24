@@ -19,7 +19,7 @@ module.exports = {
   deploy: {
     production: {
       user: 'root',
-      host: ['143.244.181.140'],
+      host: ['24.199.107.219'],
       ref: 'origin/master',
       repo: 'https://github.com/arwaabdelrahem/online-judge-microservice',
       path: '/var/www/prod',
