@@ -18,11 +18,11 @@ module.exports = {
   ],
   deploy: {
     production: {
-      key: './ssh/id_rsa',
-      ssh_options: 'StrictHostKeyChecking=no',
       user: 'root',
-      host: ['24.199.103.56'],
+      key: './ssh/id_rsa',
       ref: 'origin/master',
+      host: ['24.199.103.56'],
+      ssh_options: 'StrictHostKeyChecking=no',
       repo: 'https://github.com/arwaabdelrahem/online-judge-microservice',
       path: '/var/www/prod',
       'post-deploy':
