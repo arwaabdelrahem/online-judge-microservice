@@ -22,7 +22,7 @@ module.exports = {
       key: './ssh/id_rsa',
       ref: 'origin/master',
       host: ['24.199.103.56'],
-      ssh_options: 'StrictHostKeyChecking=no',
+      ssh_options: ['StrictHostKeyChecking=no', 'PasswordAuthentication=no'],
       repo: 'https://github.com/arwaabdelrahem/online-judge-microservice',
       path: '/var/www/prod',
       'post-deploy':
