@@ -1,20 +1,18 @@
 pipeline {
   agent any
-    
-  tools {nodejs "node"}
-    
+  tools {nodejs "node" }
   stages {
-        
     stage('Cloning Git') {
       steps {
         git 'https://github.com/arwaabdelrahem/online-judge-microservice'
       }
     }
-        
-    stage('Install dependencies') {
-      steps {
+    stage('Build') {
+       steps {
+        echo 'Building....'
         sh 'npm install'
-      }
+        sh './Install_16.04.sh'
+       }
     }
   }
 }
