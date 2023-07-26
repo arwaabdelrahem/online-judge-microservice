@@ -19,6 +19,8 @@ pipeline {
     stage('Deploy') {
        steps {
         echo 'Deploying....'
+        sh 'chmod 600 ./ssh/id_rsa'
+        sh 'chmod 600 ./ssh/id_rsa.pub'
         sh 'pm2 deploy production setup'
         sh 'pm2 deploy production'
        }
