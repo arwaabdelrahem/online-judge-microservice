@@ -19,7 +19,7 @@ module.exports = {
   deploy: {
     production: {
       key: './ssh/id_rsa.pub',
-      user: 'ubuntu',
+      user: 'root',
       host: ['24.199.103.56'],
       ref: 'origin/master',
       repo: 'https://github.com/arwaabdelrahem/online-judge-microservice',
