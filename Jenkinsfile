@@ -1,9 +1,7 @@
 pipeline {
   agent any
   tools {nodejs "node" }
-  triggers {
-    pollSCM '*/1 * * * *'
-  }
+  
   stages {
     stage('Cloning Git') {
       steps {

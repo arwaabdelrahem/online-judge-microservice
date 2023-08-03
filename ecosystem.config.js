@@ -21,7 +21,7 @@ module.exports = {
       user: 'root',
       key: './ssh/id_rsa',
       ref: 'origin/master',
-      host: ['164.92.105.191'],
+      host: ['128.199.99.183'],
       ssh_options: ['StrictHostKeyChecking=no', 'PasswordAuthentication=no'],
       repo: 'https://github.com/arwaabdelrahem/online-judge-microservice',
       path: '/var/www/prod',
